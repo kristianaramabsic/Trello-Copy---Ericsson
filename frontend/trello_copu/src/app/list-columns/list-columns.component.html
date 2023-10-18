@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Board</h2>
+    <button class="btn btn-primary mb-3" (click)="addColumn()">Add New Column</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th *ngFor="let column of columns">
+            {{ column.name }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td *ngFor="let column of columns">
+            <button class="btn btn-success btn-sm">Add New Card</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  

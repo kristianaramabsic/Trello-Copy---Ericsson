@@ -1,0 +1,21 @@
+<h1> Boards </h1>
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Board Name</th>
+        <th>Update</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let board of boards">
+          <a href="boards/{{board.id}}"><td>{{board.description}}</td></a>
+            <td><button (click)="updateBoard(board.id)" class="btn btn-success">Edit</button></td>
+          </tr>
+    </tbody>
+  </table>
+  <div class="row">
+      <button (click)="addBoard()" class="btn btn-success">Add New Board</button>
+  </div>
+</div>

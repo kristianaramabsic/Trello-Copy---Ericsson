@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Create/Update Column</h2>
+    <form (ngSubmit)="saveColumn()">
+      <div class="form-group">
+        <label for="name">Column Name:</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="column.name" name="name" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Save Column</button>
+    </form>
+  </div>
+  
